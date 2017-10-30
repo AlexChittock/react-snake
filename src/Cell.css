@@ -1,0 +1,22 @@
+.cell {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cell::before {
+  display: block;
+  box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.25);
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: 8px;
+  left: 8px;
+  height: 0;
+}

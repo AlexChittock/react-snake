@@ -1,0 +1,40 @@
+.Snake {
+  margin: 0;
+  padding: 0;
+}
+
+.body::before {
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+}
+
+.body::after {
+  background-color: rgb(102, 204, 51);
+  border-radius: 100%;
+  content: "";
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 8px;
+  bottom: 8px;
+  right: 8px;
+}
+
+.head {
+  animation: wiggle infinite 0.5s linear 0.5s alternate;
+}
+
+.head::before {
+  bottom: 2px;
+}
+
+@keyframes wiggle {
+  from { transform: rotate(5deg); }
+  to { transform: rotate(-5deg); }
+}
+
+@keyframes shadowwiggle {
+  from { transform: rotate(-5deg); }
+  to { transform: rotate(5deg); }
+}
